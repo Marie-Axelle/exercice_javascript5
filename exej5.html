@@ -5,15 +5,19 @@
     <title>5/5/5/5/5</title>
   </head>
   <body>
+    <form>
+            <label for="premier_nombre">Premier nombre : </label><input type="text" id="premier_nombre" name="premier_nombre"/><br/>
+            <label for="deuxieme_nombre">Deuxième nombre : </label><input type="text" id="deuxieme_nombre" name="deuxieme_nombre"/><br/>
+            <button  id="valider" value="Calcul" name ="calculer" onClick="calcul();">Valider</button>
+    </form>
     <script>
-      var first, second, result;
-
-      first = prompt ('entrez le premier chiffre');
-      first+= Math.floor;
-      second = prompt ('entrez le second chiffre');
-      result = parseInt(first) + parseInt(second);
+      function calcul(){
+      var premier_nombre = document.getElementById('premier_nombre').value;
+      var deuxieme_nombre = document.getElementById('deuxieme_nombre').value;
+      var result = parseInt(premier_nombre) * (deuxieme_nombre);
 
       alert(result);
+      }
     </script>
   </body>
 </html>
